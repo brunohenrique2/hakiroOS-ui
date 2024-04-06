@@ -15,6 +15,6 @@ btnPower.addEventListener("click", () => {
 })
 
 btnPowerSite.addEventListener("click", () => {
-    //essa função cria uma janela vazia com a pagina incluida dentro e depois a fecha instantaneamente
+    //Isso carrega um URL em branco (o primeiro argumento) na janela atual (o segundo argumento) e fecha a janela instantaneamente.
     window.open('','_self').close()
 })
