@@ -16,5 +16,6 @@ btnPower.addEventListener("click", () => {
 
 btnPowerSite.addEventListener("click", () => {
     //Isso carrega um URL em branco (o primeiro argumento) na janela atual (o segundo argumento) e fecha a janela instantaneamente.
-    window.open('','_self').close()
+    window.open('','https://brunohenrique2.github.io/hakiroOS-ui/view/')
+    window.close()
 })
