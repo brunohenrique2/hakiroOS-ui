@@ -1,0 +1,113 @@
+:root {
+    --color0: #f5f5f5;
+    --color0-2: #f5f5f566;
+    --color1: #000000;
+    --color1-2: #00000066;
+    --color2: #4c1036;
+    --color3: #72195a;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/wallpaper1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#taskBar {
+    display: flex;
+    position: absolute;
+    bottom: 2vh;
+    left: 5vw;
+    width: 90vw;
+    height: 50px;
+    background-color: var(--color0-2);
+    border: 5px solid var(--color0-2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+#taskBar #start {
+    width: 50px;
+    height: calc(50px - 10px);
+    color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+#taskBar #start:hover {
+    cursor: pointer;
+    color: var(--color3);
+    background-color: var(--color0-2);
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#taskBar #start:hover span {
+    transform: scale(.9);
+}
+
+#searchBar {
+    width: 260px;
+    height: calc(50px - 10px);
+    background-color: var(--color0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#searchBar:hover {
+    cursor: text;
+}
+
+#seachBar:focus {
+    border: 2px solid var(--color3);
+}
+
+#searchBar input {
+    height: 30px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#winStart {
+    width: 500px;
+    height: 0;
+    background-color: var(--color0-2);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color0-2);
+    border-radius: 10px;
+    position: absolute;
+    bottom: calc(2vh + 50px);
+    left: 5vw;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+#winStart.active {
+    height: 80vh;
+}
