@@ -3,6 +3,7 @@ let btnStart = document.querySelector("#start")
 let powerSettingsBox = document.querySelector("#powerSettingsBox")
 let btnPower = document.querySelector("#powerSettings")
 let btnPowerSite = document.querySelector("#closeSite")
+let loader = document.querySelector("#loader")
 
 btnStart.addEventListener("click", () => {
     winStart.classList.toggle("active")
@@ -19,3 +20,7 @@ btnPowerSite.addEventListener("click", () => {
     window.open('../view/encerrar.html')
 
 })
+
+function loading() {
+    loader.classList.add("hidden")
+}
