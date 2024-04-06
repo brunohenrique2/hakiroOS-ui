@@ -95,6 +95,7 @@ main {
 }
 
 #winStart {
+    visibility: hidden;
     width: 500px;
     height: 0;
     background-color: var(--color0-2);
@@ -109,5 +110,6 @@ main {
 }
 
 #winStart.active {
+    visibility: visible;
     height: 80vh;
 }
