@@ -19,6 +19,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -112,4 +113,69 @@ main {
 #winStart.active {
     visibility: visible;
     height: 80vh;
+}
+
+#asideBarOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    background-color: var(--color0-2);
+}
+
+#asideBarOptions #powerSettings {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#asideBarOptions #powerSettings:hover {
+    background-color: var(--color0);
+    cursor: pointer;
+}
+
+#powerSettingsBox {
+    visibility: hidden;
+    width: 200px;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    background-color: var(--color0-2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--color1-2);
+    transition: .3s;
+    overflow: hidden;
+}
+
+#powerSettingsBox.active {
+    visibility: visible;
+    height: 90px;
+}
+
+#powerSettingsBox .optionPower {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+#powerSettingsBox .optionPower span {
+    font-size: 18px;
+}
+
+#powerSettingsBox .optionPower:hover {
+    cursor: pointer;
+    background-color: var(--color0);
 }
