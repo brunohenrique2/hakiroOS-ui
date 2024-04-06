@@ -23,4 +23,5 @@ btnPowerSite.addEventListener("click", () => {
 
 function loading() {
     loader.classList.add("hidden")
+    loader.style.display = "none"
 }
