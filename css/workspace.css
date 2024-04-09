@@ -80,7 +80,7 @@ main {
 #searchBar {
     width: 260px;
     height: calc(50px - 10px);
-    background-color: var(--color0-1);
+    background-color: var(--lightThemeColor0-1);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -136,7 +136,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color0);
+    color: var(--lightThemeColor0);
 }
 
 #asideBarOptions .asideBarElements:hover {
