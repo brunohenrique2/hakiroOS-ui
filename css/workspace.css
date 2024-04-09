@@ -214,6 +214,7 @@ main {
     background-color: var(--darkThemeColor1-2);
     border: 2px solid var(--darkThemeColor1-2);
     border-radius: 10px;
+    backdrop-filter: blur(5px);
     position: absolute;
     top: 50%;
     left: 50%;
