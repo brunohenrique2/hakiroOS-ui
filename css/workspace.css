@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
     --color0: #ffffff;
     --color0-1: #f5f5f5;
@@ -21,7 +23,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -238,6 +240,10 @@ main {
     padding-left: 10px;
 }
 
+#winSettings #tittleBar #winTittle span, #winSettings #tittleBar #winTittle p {
+    font-size: 18px;
+}
+
 #winSettings #tittleBar #winTittle span:hover, #winSettings #tittleBar #winTittle:hover p:hover{
     cursor: default;
 }
@@ -286,6 +292,11 @@ main {
     gap: 5px;
     height: 50px;
     padding-left: 10px;
+    font-size: 18px;
+}
+
+#winSettings #winSettingsBar .winSettingsOptions span {
+    font-size: 18px;
 }
 
 #winSettings #winSettingsBar .winSettingsOptions:hover {
