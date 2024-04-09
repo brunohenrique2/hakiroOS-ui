@@ -201,6 +201,98 @@ main {
     transform: scale(.9);
 }
 
+#winSettings {
+    visibility: hidden;
+    width: 600px;
+    height: 0;
+    background-color: var(--color0-2);
+    border: 2px solid var(--color0-2);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    overflow: hidden;
+}
+
+#winSettings.active {
+    visibility: visible;
+    height: 400px;
+}
+
+#winSettings #tittleBar {
+    height: 40px;
+    background-color: var(--color0-2);
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#winSettings #tittleBar #winTittle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+#winSettings #tittleBar #winTittle span:hover, #winSettings #tittleBar #winTittle:hover p:hover{
+    cursor: default;
+}
+
+#winSettings #tittleBar #winOptionsBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#winSettings #tittleBar #winOptionsBox .winOptions {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+#winSettings #tittleBar #winOptionsBox #winClose {
+    border-radius: 0px 8px 0px 0px;
+}
+
+#winSettings #tittleBar #winOptionsBox #winClose:hover {
+    background-color: #ea433566;
+
+}
+
+#winSettings #tittleBar #winOptionsBox .winOptions:hover {
+    background-color: var(--color0-2);
+    cursor: pointer;
+}
+
+#winSettings #winSettingsBar {
+    width: 150px;
+    height: calc(100% - 40px);
+    background-color: var(--color0-2);
+}
+
+#winSettings #winSettingsBar .winSettingsOptions {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+#winSettings #winSettingsBar .winSettingsOptions:hover {
+    background-color: var(--color0-1);
+    cursor: pointer;
+}
+
 #loader {
     position: fixed;
     width: 100%;
