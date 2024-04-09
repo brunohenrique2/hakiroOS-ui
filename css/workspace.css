@@ -112,6 +112,7 @@ main {
     left: 5vw;
     transition: 0.3s;
     overflow: hidden;
+    z-index: 2;
 }
 
 #winStart.active {
