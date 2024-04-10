@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <title>Hakiro OS</title>
 </head>
 <body onload="loading()">
-    <main>
+    <main id="main">
         <div id="loader">
             <p>Iniciando...</p>
         </div>
@@ -49,18 +49,20 @@
                 </div>
             </div>
             <div id="winSettingsBar">
-                <div id="theme" class="winSettingsOptions">
+                <div id="themes" class="winSettingsOptions">
                     <span class="material-symbols-rounded">draw</span>
                     <p>Theme</p>
                 </div>
             </div>
             <div id="winSettingsTheme">
-                <p>Themes</p>
-                <div class="themeOptions">
-                    <p>Light</p>
-                </div>
-                <div class="themeOptions">
-                    <p>Dark</p>
+                <h2 id="settingsThemeTittle">Theme</h2>
+                <div id="selectTheme">
+                    <div id="lightMode" class="themeOptions">
+                        <p class="nameTheme">Light</p>
+                    </div>
+                    <div id="darkMode" class="themeOptions">
+                        <p class="nameTheme">Dark</p>
+                    </div>
                 </div>
             </div>
         </div>

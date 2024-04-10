@@ -7,6 +7,12 @@ let loader = document.querySelector("#loader")
 let appSettings = document.querySelector("#settings")
 let winSettings = document.querySelector("#winSettings")
 let winClose = document.querySelector("#winClose")
+let btnTheme = document.querySelector("#themes")
+let winSettingsTheme = document.querySelector("#winSettingsTheme")
+let btnLightMode = document.querySelector("#lightMode")
+let btnDarkMode = document.querySelector("#darkMode")
+let html = document.querySelector("#html")
+let wallpaper = document.querySelector("#main")
 
 btnStart.addEventListener("click", () => {
     winStart.classList.toggle("active")
@@ -19,9 +25,7 @@ btnPower.addEventListener("click", () => {
 })
 
 btnPowerSite.addEventListener("click", () => {
-    //Isso carrega um URL em branco (o primeiro argumento) na janela atual (o segundo argumento) e fecha a janela instantaneamente.
     window.open('../view/encerrar.html')
-
 })
 
 appSettings.addEventListener("click", () => {
@@ -30,6 +34,24 @@ appSettings.addEventListener("click", () => {
 
 winClose.addEventListener("click", () => {
     winSettings.classList.remove("active")
+})
+
+btnTheme.addEventListener("click", () => {
+    winSettingsTheme.classList.toggle("active")
+})
+
+btnLightMode.addEventListener("click", () => {
+    btnLightMode.classList.add("active")
+    btnDarkMode.classList.remove("active")
+    html.classList.remove("darkMode")
+    wallpaper.style.backgroundImage = "url('../img/wallpaper1.jpg')"
+})
+
+btnDarkMode.addEventListener("click", () => {
+    btnDarkMode.classList.add("active")
+    btnLightMode.classList.remove("active")
+    html.classList.add("darkMode")
+    wallpaper.style.backgroundImage = "url('../img/wallpaper2.jpeg')"
 })
 
 function loading() {
