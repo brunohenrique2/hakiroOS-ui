@@ -430,8 +430,6 @@ main {
     background-image: url("../img/darkThemeImageExemple.png");
 }
 
-#winSettings #winSettingsTheme #selectTheme #lightMode
-
 #loader {
     --bg-color1: #000000;
     position: absolute;
@@ -443,6 +441,11 @@ main {
     flex-direction: column-reverse;
     background-color: var(--bg-color1);
     z-index: 100;
+}
+
+#loader.hidden {
+    visibility: visible;
+    opacity: 0;
 }
 
 #loader p {
@@ -462,11 +465,6 @@ main {
     border-top-color: var(--color3);
     border-radius: 50%;
     animation: loading 1s ease infinite;
-}
-
-#loader.hidden {
-    visibility: 0;
-    opacity: 0;
 }
 
 @keyframes loading {
