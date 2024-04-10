@@ -43,18 +43,32 @@ btnTheme.addEventListener("click", () => {
 btnLightMode.addEventListener("click", () => {
     btnLightMode.classList.add("active")
     btnDarkMode.classList.remove("active")
-    html.classList.remove("darkMode")
-    wallpaper.style.backgroundImage = "url('../img/wallpaper1.jpg')"
+
+    localStorage.setItem("theme", "lightMode")
+    html.classList.add(localStorage.getItem("theme"))
+    
+    localStorage.setItem("wallpaper", "url('../img/wallpaper1.jpg')")
+    wallpaper.style.backgroundImage = localStorage.getItem("wallpaper")
+
+    window.location.reload()
 })
 
 btnDarkMode.addEventListener("click", () => {
     btnDarkMode.classList.add("active")
     btnLightMode.classList.remove("active")
-    html.classList.add("darkMode")
+
+    localStorage.setItem("theme", "darkMode")
+    html.classList.add(localStorage.getItem("theme"))
+
+    localStorage.setItem("wallpaper", "url('../img/wallpaper2.jpeg')")
     wallpaper.style.backgroundImage = "url('../img/wallpaper2.jpeg')"
+
+    window.location.reload()
 })
 
 function loading() {
+    html.classList.add(localStorage.getItem("theme"))
+    wallpaper.style.backgroundImage = localStorage.getItem("wallpaper")
     loader.classList.add("hidden")
     loader.style.display = "none"
 }
