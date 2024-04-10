@@ -444,7 +444,7 @@ main {
 }
 
 #loader.hidden {
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
 }
 
