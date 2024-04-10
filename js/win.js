@@ -61,7 +61,7 @@ btnDarkMode.addEventListener("click", () => {
     html.classList.add(localStorage.getItem("theme"))
 
     localStorage.setItem("wallpaper", "url('../img/wallpaper2.jpeg')")
-    wallpaper.style.backgroundImage = "url('../img/wallpaper2.jpeg')"
+    wallpaper.style.backgroundImage = localStorage.getItem("wallpaper")
 
     window.location.reload()
 })
