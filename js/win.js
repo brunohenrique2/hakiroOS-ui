@@ -26,7 +26,6 @@ let date = document.querySelector("#date")
 btnStart.addEventListener("click", () => {
     winStart.classList.toggle("active")
     powerSettingsBox.classList.remove("active")
-    console.log("click")
 })
 
 btnPower.addEventListener("click", () => {
@@ -34,7 +33,7 @@ btnPower.addEventListener("click", () => {
 })
 
 function desligar() {
-    window.close('../view/index.html')
+    close()
 }
 
 btnEndSystem.addEventListener("click", () => {
