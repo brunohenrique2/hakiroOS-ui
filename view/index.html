@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" id="html" class="lightMode">
+<html lang="pt-br" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,9 +32,13 @@
                     <span class="material-symbols-rounded">person</span>
                     <p>Perfil</p>
                 </div>
+                <div id="settings" class="asideBarElements">
+                    <span class="material-symbols-rounded">settings</span>
+                    <p>Settings</p>
+                </div>
                 <div id="powerSettings" class="asideBarElements">
                     <span class="material-symbols-rounded">power_settings_new</span>
-                    <p>Desligar</p>
+                    <p>Power</p>
                 </div>
             </div>
         </div>
@@ -66,6 +70,15 @@
                         <p class="nameTheme">Dark</p>
                     </div>
                 </div>
+                <!--
+                    <div id="selectWallpaper">
+                        <h2 id="settingsThemeTittle">Wallpaper</h2>
+                        <label id="btnAddWallpaper" for="addWallpaper">
+                            <span class="material-symbols-rounded">add</span>
+                            <input type="file" name="addWallpaper" id="addWallpaper">
+                        </label>
+                    </div>
+                -->
             </div>
         </div>
         <div id="taskBar">
@@ -76,11 +89,12 @@
                 <span class="material-symbols-rounded">search</span>
                 <input type="text" placeholder="Search">
             </div>
-            <div id="settings" class="taskBarApps">
-                <span class="material-symbols-rounded">settings</span>
-            </div>
             <div id="archive" class="taskBarApps">
                 <span class="material-symbols-rounded">folder</span>
+            </div>
+            <div id="displayTimer">
+                <p id="timer"></p>
+                <p id="date"></p>
             </div>
         </div>
     </main>
