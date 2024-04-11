@@ -52,6 +52,9 @@ btnRestartSystem.addEventListener("click", () => {
 
 appSettings.addEventListener("click", () => {
     winSettings.classList.toggle("active")
+    winStart.classList.remove("active")
+    
+    
 })
 
 winClose.addEventListener("click", () => {
