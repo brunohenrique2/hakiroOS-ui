@@ -33,7 +33,7 @@ btnPower.addEventListener("click", () => {
 })
 
 function desligar() {
-    close()
+    loaderEnd.classList.add("hidden")
 }
 
 btnEndSystem.addEventListener("click", () => {
