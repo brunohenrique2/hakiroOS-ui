@@ -474,7 +474,7 @@ main {
 
 }
 
-#loader {
+.loader {
     --bg-color1: #000000;
     position: absolute;
     width: 100vw;
@@ -487,12 +487,12 @@ main {
     z-index: 100;
 }
 
-#loader.hidden {
+.hidden {
     visibility: hidden;
     opacity: 0;
 }
 
-#loader p {
+.loader p {
     --color: #f5f5f5;
     color: var(--color);
     position: relative;
@@ -500,7 +500,7 @@ main {
     font-size: 24px;
 }
 
-#loader::after {
+.loader::after {
     --border-color: #f5f5f5;
     content: "";
     width: 75px;

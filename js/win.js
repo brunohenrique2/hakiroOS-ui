@@ -2,8 +2,11 @@ let winStart = document.querySelector("#winStart")
 let btnStart = document.querySelector("#start")
 let powerSettingsBox = document.querySelector("#powerSettingsBox")
 let btnPower = document.querySelector("#powerSettings")
-let btnPowerSite = document.querySelector("#closeSite")
-let loader = document.querySelector("#loader")
+let btnEndSystem = document.querySelector("#endSystem")
+let btnRestartSystem = document.querySelector("#restartSystem")
+let loaderStart = document.querySelector("#loaderStart")
+let loaderEnd = document.querySelector("#loaderEnd")
+let loaderRestart = document.querySelector("#loaderRestart")
 let appSettings = document.querySelector("#settings")
 let winSettings = document.querySelector("#winSettings")
 let winClose = document.querySelector("#winClose")
@@ -18,6 +21,8 @@ let addWallpaper = document.querySelector("#addWallpaper")
 let timer = document.querySelector("#timer")
 let date = document.querySelector("#date")
 
+
+
 btnStart.addEventListener("click", () => {
     winStart.classList.toggle("active")
     powerSettingsBox.classList.remove("active")
@@ -28,8 +33,22 @@ btnPower.addEventListener("click", () => {
     powerSettingsBox.classList.toggle("active")
 })
 
-btnPowerSite.addEventListener("click", () => {
-    window.open('../view/encerrar.html')
+function desligar() {
+    window.close('../view/index.html')
+}
+
+btnEndSystem.addEventListener("click", () => {
+    loaderEnd.classList.remove("hidden")
+    setInterval(desligar, 5000)
+})
+
+function restart() {
+    window.location.reload()
+}
+
+btnRestartSystem.addEventListener("click", () => {
+    loaderRestart.classList.remove("hidden")
+    setInterval(restart, 5000)
 })
 
 appSettings.addEventListener("click", () => {
@@ -99,6 +118,14 @@ btnDarkMode.addEventListener("click", () => {
 
 })
 
+//Atualizar a hora e a data em tempo real
+setInterval(() => {
+    const dateNow = new Date()
+    timer.innerHTML = dateNow.toLocaleTimeString()
+    date.innerHTML = dateNow.toLocaleDateString()
+}, 1000)
+
+//Processado junto com o carregamento da pagina
 function loading() {
     wallpaper.style.backgroundImage = localStorage.getItem("wallpaper")
     cssRoot.style.setProperty("--bg-color1", localStorage.getItem("--bg-color1"))
@@ -109,14 +136,7 @@ function loading() {
     cssRoot.style.setProperty("--color3", localStorage.getItem("--color3"))
     cssRoot.style.setProperty("--border-color", localStorage.getItem("--border-color"))
     cssRoot.style.setProperty("--box-shadow-color", localStorage.getItem("--box-shadow-color"))
-    loader.classList.add("hidden")
-    loader.style.display = "none"
+    loaderStart.classList.add("hidden")
+    loaderStart.style.display = "none"
 }
 
-setInterval(time, 1000)
-
-function time() {
-    const dateNow = new Date()
-    timer.innerHTML = dateNow.toLocaleTimeString()
-    date.innerHTML = dateNow.toLocaleDateString()
-}

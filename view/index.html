@@ -9,7 +9,13 @@
 </head>
 <body onload="loading()">
     <main id="main">
-        <div id="loader">
+        <div id="loaderRestart" class="loader hidden">
+            <p>Reiniciando...</p>
+        </div>
+        <div id="loaderEnd" class="loader hidden">
+            <p>Encerrando...</p>
+        </div>
+        <div id="loaderStart" class="loader">
             <p>Iniciando...</p>
         </div>
         <div id="winStart">
@@ -19,11 +25,11 @@
                         <span class="material-symbols-rounded">bedtime</span>
                         <p>Suspender</p>
                     </div>
-                    <div id="closeSite" class="optionPower">
+                    <div id="endSystem" class="optionPower">
                         <span class="material-symbols-rounded">power_settings_new</span>
                         <p>Desligar</p>
                     </div>
-                    <div class="optionPower">
+                    <div id="restartSystem" class="optionPower">
                         <span class="material-symbols-rounded">restart_alt</span>
                         <p>Reiniciar</p>
                     </div>
