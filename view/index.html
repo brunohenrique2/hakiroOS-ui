@@ -39,52 +39,13 @@
                     <p>Perfil</p>
                 </div>
                 <div id="settings" class="asideBarElements">
-                    <span class="material-symbols-rounded">settings</span>
+                    <span class="material-symbols-rounded iconApp">settings</span>
                     <p>Settings</p>
                 </div>
                 <div id="powerSettings" class="asideBarElements">
                     <span class="material-symbols-rounded">power_settings_new</span>
                     <p>Power</p>
                 </div>
-            </div>
-        </div>
-        <div id="winSettings">
-            <div id="tittleBar">
-                <div id="winTittle">
-                    <span class="material-symbols-rounded">settings</span>
-                    <p>Settings</p>
-                </div>
-                <div id="winOptionsBox">
-                    <span id="winClose" class="material-symbols-rounded winOptions">close</span>
-                    <span id="winResize" class="material-symbols-rounded winOptions">fullscreen</span>
-                    <span id="winMinimize" class="material-symbols-rounded winOptions">remove</span>
-                </div>
-            </div>
-            <div id="winSettingsBar">
-                <div id="themes" class="winSettingsOptions">
-                    <span class="material-symbols-rounded">draw</span>
-                    <p>Theme</p>
-                </div>
-            </div>
-            <div id="winSettingsTheme">
-                <h2 id="settingsThemeTittle">Theme</h2>
-                <div id="selectTheme">
-                    <div id="lightMode" class="themeOptions">
-                        <p class="nameTheme">Light</p>
-                    </div>
-                    <div id="darkMode" class="themeOptions">
-                        <p class="nameTheme">Dark</p>
-                    </div>
-                </div>
-                <!--
-                    <div id="selectWallpaper">
-                        <h2 id="settingsThemeTittle">Wallpaper</h2>
-                        <label id="btnAddWallpaper" for="addWallpaper">
-                            <span class="material-symbols-rounded">add</span>
-                            <input type="file" name="addWallpaper" id="addWallpaper">
-                        </label>
-                    </div>
-                -->
             </div>
         </div>
         <div id="taskBar">
@@ -96,7 +57,7 @@
                 <input type="text" placeholder="Search">
             </div>
             <div id="archive" class="taskBarApps">
-                <span class="material-symbols-rounded">folder</span>
+                <span class="material-symbols-rounded iconApp">folder</span>
             </div>
             <div id="displayTimer">
                 <p id="timer"></p>
@@ -105,7 +66,8 @@
         </div>
     </main>
     <script src="../js/system.js"></script>
-    <script src="../js/themes.js"></script>
     <script src="../js/window.js"></script>
+    <script src="../apps/settings/settings.js"></script>
+    <script src="../js/themes.js"></script>
 </body>
 </html>
