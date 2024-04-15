@@ -72,13 +72,6 @@ const winSettings = new Windows(appSettings.id, iconsApp[0].innerHTML)
 const appExplorer = document.querySelector("#explorer")
 const winExplorer = new Windows(appExplorer.id, iconsApp[1].innerHTML)
 
-
-
-console.log(iconsApp)
-for(i = 0; i < iconsApp.length; i++){
-
-}
-
 let winClose = document.querySelectorAll(".winClose")
 let windows = document.querySelectorAll(".window")
 
@@ -87,3 +80,31 @@ for(let i = 0; i < winClose.length; i++){
         windows[i].classList.remove("active")
     })
 }
+
+//movimentando as janelas
+const winTittleBar = document.querySelectorAll(".winTittleBar")
+
+for(let i = 0; i < winTittleBar.length; i++){
+    winTittleBar[i].addEventListener("mousedown", () => {
+        for(let i=0; i<windows.length; i++) {
+            const move = (e) => {
+                windows[i].style.left = `${e.clientX - offSetX}px`
+                windows[i].style.top = `${e.clientY - offSetY}px`
+                windows[i].style.transitionDuration = "0s"
+            }
+        
+            windows[i].addEventListener("mousedown", (e) => {
+                offSetX = e.clientX - windows[i].offsetLeft
+                offSetY = e.clientY - windows[i].offsetTop
+                document.addEventListener("mousemove", move)
+
+            })
+        
+            document.addEventListener("mouseup", () => {
+                document.removeEventListener("mousemove", move)
+                windows[i].style.transitionDuration = "0.3s"
+            })
+        }
+    })
+}
+
