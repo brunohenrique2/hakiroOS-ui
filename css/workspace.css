@@ -231,7 +231,22 @@ main {
     transition: .3s;
 }
 
-.taskBarApps:hover {
+#taskBar .taskBarApps.active::after {
+    content: "";
+    background-color: var(--color3);
+    height: 3px;
+    width: 25px;
+    border-radius: 1px 1px 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    transition: .3s;
+}
+
+#taskBar .taskBarApps.active:hover::after {
+    width: 50px;
+}
+
+#taskBar .taskBarApps:hover {
     background-color: var(--bg-color2);
     cursor: pointer;
 
