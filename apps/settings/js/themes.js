@@ -59,3 +59,5 @@ btnDarkMode.addEventListener("click", () => {
     localStorage.setItem("wallpaper", "url('../img/wallpaper2.jpeg')")
     wallpaper.style.backgroundImage = localStorage.getItem("wallpaper")
 })
+
+let addWallpaper = document.querySelector("#addWallpaper")

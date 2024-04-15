@@ -1,27 +1,10 @@
-let appSettings = document.querySelector("#settings")
-
-const winSettings = new Windows(appSettings.id)
-
-appSettings.addEventListener("click", () => { 
+appSettings.addEventListener("click", () => {
     winSettings.openWindow(appSettings.id)
     winStart.classList.remove("active")
 })
 
-let winClose = document.querySelectorAll(".winClose")
-let windows = document.querySelectorAll(".window")
-
-for(let i = 0; i < winClose.length; i++){
-    winClose[i].addEventListener("click", () => {
-        for(let i = 0; i < windows.length; i++) {
-            if(windows[0].id == appSettings.id) {
-                windows[0].classList.remove("active")
-            }
-        }
-    })
-}
-
 for(let i = 0; i < windows.length; i++) {
-    if(windows[0].id == appSettings.id) {
+    if(windows[i].id == appSettings.id) {
         const winSettingsBar = document.createElement("div")
         const themes = document.createElement("div")
         const optionThemesIcon = document.createElement("span")
