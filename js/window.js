@@ -109,7 +109,11 @@ for(let i = 0; i < winTittleBar.length; i++){
                 offSetX = e.clientX - windows[i].offsetLeft
                 offSetY = e.clientY - windows[i].offsetTop
                 document.addEventListener("mousemove", move)
-
+                for(let i = 0; i < windows.length; i++) {
+                    windows[i].style.zIndex = "auto"
+                }
+                windows[i].style.zIndex = 2
+                console.log(windows[i].style.zIndex)
             })
         
             document.addEventListener("mouseup", () => {
