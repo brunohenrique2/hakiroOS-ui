@@ -1,3 +1,3 @@
 appExplorer.addEventListener("click", () => {
-    winExplorer.openWindow(appExplorer.id)
+    winExplorer.openWindowTaskBar(appExplorer.id)
 })

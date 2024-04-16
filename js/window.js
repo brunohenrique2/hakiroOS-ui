@@ -55,12 +55,29 @@ class Windows {
         winOptionsBox.appendChild(btnMinimize)
     }
 
-    openWindow(id) {
+    openWindowStart(id) {
         let windows = document.querySelectorAll(".window")
 
         for(var i = 0; i < windows.length; i++) {
             if(windows[i].id == id) {
                 windows[i].classList.add("active")
+                for(let i = 0; i < windows.length; i++) {
+                    windows[i].style.zIndex = "auto"
+                }
+                windows[i].style.zIndex = 2
+            }
+        }
+    }
+    openWindowTaskBar(id) {
+        let windows = document.querySelectorAll(".window")
+
+        for(var i = 0; i < windows.length; i++) {
+            if(windows[i].id == id) {
+                windows[i].classList.toggle("active")
+                for(let i = 0; i < windows.length; i++) {
+                    windows[i].style.zIndex = "auto"
+                }
+                windows[i].style.zIndex = 2
             }
         }
     }
@@ -75,6 +92,7 @@ const winExplorer = new Windows(appExplorer.id, iconsApp[1].innerHTML)
 let winClose = document.querySelectorAll(".winClose")
 let windows = document.querySelectorAll(".window")
 let apps = document.querySelectorAll(".apps")
+const main = document.querySelector("#main")
 
 for(let i = 0; i < apps.length; i++) {
     apps[i].addEventListener("click", () => {
@@ -86,8 +104,6 @@ for(let i = 0; i < winClose.length; i++){
     winClose[i].addEventListener("click", () => {
         windows[i].classList.remove("active")
         if(windows[i].id == apps[i].id){
-            console.log(windows[i].id)
-            console.log(apps[i].id)
             apps[i].classList.remove("active")
         }
     })
@@ -113,7 +129,6 @@ for(let i = 0; i < winTittleBar.length; i++){
                     windows[i].style.zIndex = "auto"
                 }
                 windows[i].style.zIndex = 2
-                console.log(windows[i].style.zIndex)
             })
         
             document.addEventListener("mouseup", () => {

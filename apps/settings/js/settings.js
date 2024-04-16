@@ -1,5 +1,5 @@
 appSettings.addEventListener("click", () => {
-    winSettings.openWindow(appSettings.id)
+    winSettings.openWindowStart(appSettings.id)
     winStart.classList.remove("active")
 })
 
