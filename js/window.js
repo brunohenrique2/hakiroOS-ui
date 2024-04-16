@@ -74,19 +74,21 @@ const winExplorer = new Windows(appExplorer.id, iconsApp[1].innerHTML)
 
 let winClose = document.querySelectorAll(".winClose")
 let windows = document.querySelectorAll(".window")
-let taskBarApps = document.querySelectorAll(".taskBarApps")
+let apps = document.querySelectorAll(".apps")
 
-for(let i = 0; i < taskBarApps.length; i++) {
-    taskBarApps[i].addEventListener("click", () => {
-        taskBarApps[i].classList.add("active")
+for(let i = 0; i < apps.length; i++) {
+    apps[i].addEventListener("click", () => {
+        apps[i].classList.add("active")
     })
 }
 
 for(let i = 0; i < winClose.length; i++){
     winClose[i].addEventListener("click", () => {
         windows[i].classList.remove("active")
-        for(let i = 0; i < taskBarApps.length; i++) {
-            taskBarApps[i].classList.remove("active")
+        if(windows[i].id == apps[i].id){
+            console.log(windows[i].id)
+            console.log(apps[i].id)
+            apps[i].classList.remove("active")
         }
     })
 }
