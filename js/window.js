@@ -4,6 +4,7 @@ let winStart = document.querySelector("#winStart")
 let btnStart = document.querySelector("#start")
 let powerSettingsBox = document.querySelector("#powerSettingsBox")
 let btnPower = document.querySelector("#powerSettings")
+let btnClosePowerSettings = document.querySelector("#closePowerSettingsBox")
 
 btnStart.addEventListener("click", () => {
     winStart.classList.toggle("active")
@@ -12,6 +13,10 @@ btnStart.addEventListener("click", () => {
 
 btnPower.addEventListener("click", () => {
     powerSettingsBox.classList.toggle("active")
+})
+
+btnClosePowerSettings.addEventListener("click", () => {
+    powerSettingsBox.classList.remove("active")
 })
 
 /*====================JANELAS====================*/

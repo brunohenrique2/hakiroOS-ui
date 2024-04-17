@@ -18,22 +18,25 @@
         <div id="loaderStart" class="loader">
             <p>Iniciando...</p>
         </div>
+        <div id="powerSettingsBox">
+            <div id="closePowerSettingsBox">
+                <span class="material-symbols-rounded">close</span>
+            </div>
+            <div class="optionPower">
+                <span class="material-symbols-rounded">bedtime</span>
+                <p>Suspender</p>
+            </div>
+            <div id="endSystem" class="optionPower">
+                <span class="material-symbols-rounded">power_settings_new</span>
+                <p>Desligar</p>
+            </div>
+            <div id="restartSystem" class="optionPower">
+                <span class="material-symbols-rounded">restart_alt</span>
+                <p>Reiniciar</p>
+            </div>
+        </div>
         <div id="winStart">
             <div id="asideBarOptions">
-                <div id="powerSettingsBox">
-                    <div class="optionPower">
-                        <span class="material-symbols-rounded">bedtime</span>
-                        <p>Suspender</p>
-                    </div>
-                    <div id="endSystem" class="optionPower">
-                        <span class="material-symbols-rounded">power_settings_new</span>
-                        <p>Desligar</p>
-                    </div>
-                    <div id="restartSystem" class="optionPower">
-                        <span class="material-symbols-rounded">restart_alt</span>
-                        <p>Reiniciar</p>
-                    </div>
-                </div>
                 <div id="userConfig" class="asideBarElements">
                     <span class="material-symbols-rounded">person</span>
                     <p>Perfil</p>
@@ -62,6 +65,12 @@
             <div id="displayTimer">
                 <p id="timer"></p>
                 <p id="date"></p>
+            </div>
+        </div>
+        <div id="workspace">
+            <div class="workspaceElements" draggable="true">
+                <img src="../img/lixeira_iconApp.png" alt="" draggable="false">
+                <p>lixeira</p>
             </div>
         </div>
     </main>
