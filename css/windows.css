@@ -1,0 +1,77 @@
+.window {
+    grid-auto-flow: row;
+    visibility: hidden;
+    width: 600px;
+    height: 0px;
+    background-color: var(--bg-color2);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    overflow: hidden;
+}
+
+.window.active {
+    visibility: visible;
+    height: 400px;
+}
+
+.window .winTittleBar {
+    height: 40px;
+    background-color: var(--bg-color2);
+    color: var(--color);
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window .winTittleBar .winTittle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.window .winTittleBar .winTittle span, .window #winTittleBar .winTittle p {
+    font-size: 18px;
+}
+
+.window .winTittleBar .winTittle span:hover, .window .winTittleBar .winTittle:hover p:hover{
+    cursor: default;
+}
+
+.window .winTittleBar .winOptionsBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.window .winTittleBar .winOptionsBox .winOptions {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.window .winTittleBar .winOptionsBox .winOptions:hover {
+    background-color: var(--bg-color2);
+    cursor: pointer;
+}
+
+.window .winTittleBar .winOptionsBox .winClose {
+    border-radius: 0px 8px 0px 0px;
+}
+
+.window .winTittleBar .winOptionsBox .winClose:hover {
+    background-color: #ea433566;
+
+}

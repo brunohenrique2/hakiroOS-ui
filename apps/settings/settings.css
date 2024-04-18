@@ -1,0 +1,136 @@
+.window #winSettingsBar {
+    width: 150px;
+    height: calc(100% - 40px);
+    background-color: var(--bg-color2);
+    color: var(--color);
+}
+
+.window #winSettingsBar .winSettingsOptions {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.window #winSettingsBar .winSettingsOptions span, .window #winSettingsBar .winSettingsOptions p {
+    font-size: 18px;
+}
+
+.window #winSettingsBar .winSettingsOptions:hover {
+    background-color: var(--bg-color2);
+    cursor: pointer;
+}
+
+.window #winSettingsTheme {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    width: 450px;
+    height: calc(100% - 40px);
+    padding: 10px;
+    overflow: hidden;
+    transform: scale(1.04);
+    transition: .3s;
+}
+
+.window #winSettingsTheme.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.window #winSettingsTheme #settingsThemeTittle {
+    color: var(--color);
+}
+
+.window #winSettingsTheme #selectTheme {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+
+.window #winSettingsTheme #selectTheme .themeOptions {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 90px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: .5s;
+}
+
+.window #winSettingsTheme #selectTheme .themeOptions:hover {
+
+    cursor: pointer;
+    border-color: var(--color3);
+    transform: scale(1.1);
+}
+
+.window #winSettingsTheme #selectTheme .themeOptions.active {
+    border-color: var(--color3);
+}
+
+.window #winSettingsTheme #selectTheme .themeOptions .nameTheme {
+    --bg-color2: #00000066;
+    --color: #f5f5f5;
+    background-color: var(--bg-color2);
+    color: var(--color);
+    padding: 5px;
+    text-align: center;
+}
+
+.window #winSettingsTheme #selectTheme .themeOptions:hover .nameTheme {
+    visibility: hidden;
+}
+
+.window #winSettingsTheme #selectTheme #lightMode {
+    background-image: url("../../img/lightThemeImageExemple.png");
+}
+
+.window #winSettingsTheme #selectTheme #darkMode {
+    background-image: url("../../img/darkThemeImageExemple.png");
+}
+
+.window #winSettingsTheme #selectWallpaper {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.window #winSettingsTheme #selectWallpaper #addWallpaper {
+    display: none;
+}
+
+.window #winSettingsTheme #selectWallpaper label {
+    background-color: var(--bg-color2);
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--bg-color3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.window #winSettingsTheme #selectWallpaper label:hover {
+    cursor: pointer;
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+.window #winSettingsTheme #selectWallpaper span {
+    font-size: 30px;
+}
