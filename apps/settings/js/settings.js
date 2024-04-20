@@ -24,7 +24,7 @@ for(let i = 0; i < windows.length; i++) {
         themes.classList.add("winSettingsOptions")
         optionThemesIcon.classList.add("material-symbols-rounded")
         optionThemesIcon.innerHTML = "draw"
-        optionThemesName.innerHTML = "Costumer"
+        optionThemesName.innerHTML = "Custumize"
         winSettingsTheme.setAttribute("id", "winSettingsTheme")
         settingsThemeTittle.setAttribute("id", "settingsThemeTittle")
         settingsThemeTittle.innerHTML = "Themes"

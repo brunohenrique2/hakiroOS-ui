@@ -126,7 +126,7 @@ for(let i = 0; i < winTittleBar.length; i++){
                 windows[i].style.transitionDuration = "0s"
             }
         
-            windows[i].addEventListener("mousedown", (e) => {
+            winTittleBar[i].addEventListener("mousedown", (e) => {
                 offSetX = e.clientX - windows[i].offsetLeft
                 offSetY = e.clientY - windows[i].offsetTop
                 document.addEventListener("mousemove", move)
@@ -143,13 +143,3 @@ for(let i = 0; i < winTittleBar.length; i++){
         }
     })
 }
-
- var matriz = [ [1,2,3],
-                [4,5,6],
-                [7,8,9] ];
-
-    for(let lin=0 ; lin<3 ; lin++){
-        for(let col=0; col<3 ; col++){
-            console.log(matriz[lin][col]);
-        }
-    }
