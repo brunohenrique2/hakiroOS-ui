@@ -23,7 +23,7 @@ btnClosePowerSettings.addEventListener("click", () => {
 
 class Windows {
     constructor(id, iconApp) {
-        
+        //Criando os elementos da estrutura base das janelas
         const main = document.querySelector("#main")
         const window = document.createElement("div")
         const winTittleBar = document.createElement("div")
@@ -33,7 +33,7 @@ class Windows {
         const btnResize = document.createElement("span")
         const btnMinimize = document.createElement("span")
         const winIconApp = document.createElement("span")
-
+        
         btnClose.innerHTML = "close"
         btnResize.innerHTML = "fullscreen"
         btnMinimize.innerHTML = "remove"
@@ -41,6 +41,7 @@ class Windows {
 
         window.id = id
 
+        //Adicionando e setando os atributos elementos
         window.classList.add("window")
         winTittleBar.classList.add("winTittleBar")
         winTittle.classList.add("winTittle")
@@ -50,6 +51,7 @@ class Windows {
         btnMinimize.classList.add("material-symbols-rounded", "winOptions", "winMinimize")
         winIconApp.classList.add("material-symbols-rounded")
 
+        //Implementando os elementos seguindo a estrtura base da janela
         main.appendChild(window)
         window.appendChild(winTittleBar)
         winTittleBar.appendChild(winTittle)
@@ -60,6 +62,7 @@ class Windows {
         winOptionsBox.appendChild(btnMinimize)
     }
 
+    //Função para abrir os apps na janela Start do sistema
     openWindowStart(id) {
         let windows = document.querySelectorAll(".window")
 
@@ -73,6 +76,8 @@ class Windows {
             }
         }
     }
+
+    //Função para abrir os apps na barra de tarefas do sistema
     openWindowTaskBar(id) {
         let windows = document.querySelectorAll(".window")
 
